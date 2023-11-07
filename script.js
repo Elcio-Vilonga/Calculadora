@@ -15,17 +15,19 @@ function calcular() {
     }
 }
 
-function clean() {
+function clean() 
+{
     document.getElementById('resultado').value = '';
 }
 
 function back()
 {
-    var resultado = document.getElementById('resultado').innerHTML;
-    document.getElementById('resultado').innerHTML = resultado.substring(0, resultado.length -1);
+    var resultado = document.getElementById('resultado').value;
+    document.getElementById('resultado').value = resultado.substring(0, resultado.length -1);
 }
 
-function historico(expression) {
+function historico(expression) 
+{
     const historyTable = document.querySelector('.history table');
     const newRow = historyTable.insertRow(-1);
     const dateCell = newRow.insertCell(0);
